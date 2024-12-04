@@ -102,3 +102,41 @@ button:hover {
     margin: 20px 0 0 0;
   }
 }
+
+/* card weather-city */
+.ajax-section {
+  margin: 5rem 0 2rem;
+}
+
+.ajax-section .cities {
+  display: grid; /*tạo bố cục lưỡi */
+  grid-gap: 3rem 2rem;
+  /*
+  grid-gap: <rowgap> <columngap>
+  Khoảng cách giữa các hàng và các cột
+  */
+  grid-template-columns: repeat(4, 1fr);
+  /*  
+  Xác định số lượng kích thích trong một hàng
+  Có nghĩa: lưỡi có 4 cột, 
+  mỗi cột chiếm một phần không gian bằng nhau
+  */
+}
+
+@media screen and (max-width: 1000px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
