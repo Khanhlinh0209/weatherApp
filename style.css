@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bg_main: #0a1f44;
+  --text_light: #fff;
+  --text_med: #53627c;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff8c00;
+}
+
+body {
+  background-color: var(--bg_main);
+  color: var(--text_dark);
+}
+
+h1 {
+  color: var(--text_light);
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--text_light);
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 2rem;
+  width: 10rem;
+  height: 4rem;
+  margin-left: 3rem;
+}
+
+button:hover {
+  background-color: var(--darkred);
+}
+
+.inputCity {
+  color: var(--text_light);
+  background-color: var(--bg_main);
+  font-size: 2rem;
+  border: none;
+  border-bottom: var(--text_light) 2px solid;
+}
