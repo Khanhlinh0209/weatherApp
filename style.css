@@ -81,7 +81,7 @@ button:hover {
 .temperature {
   font-size: 5rem;
   font-weight: 700;
-  color: var(--text_dark);
+  color: var(--tNext_dark);
 }
 
 .temperature > sup {
