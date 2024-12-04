@@ -23,6 +23,11 @@ body {
   color: var(--text_dark);
 }
 
+.container form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 h1 {
   color: var(--text_light);
   font-weight: 700;
@@ -52,6 +57,11 @@ button:hover {
   border: none;
   border-bottom: var(--text_light) 2px solid;
 }
+
+.msg {
+  color: var(--text_light);
+  font-size: 2rem;
+}
 .weather-card {
   margin-top: 3rem;
   background-color: var(--text_light);
@@ -73,4 +83,22 @@ button:hover {
   margin: -1rem;
   font-size: 2rem;
   color: var(--text_dark);
+}
+
+@media screen and (max-width: 700px) {
+  /* css bên trong áp dụng khi màn hình <= 700px */
+  .container div h1 {
+    font-size: 3rem;
+  }
+  .container form {
+    flex-direction: column;
+  }
+
+  .container form input,
+  .container form button {
+    width: 100%;
+  }
+  .container form button {
+    margin: 20px 0 0 0;
+  }
 }
