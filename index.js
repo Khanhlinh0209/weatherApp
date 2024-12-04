@@ -10,14 +10,20 @@ form.addEventListener("submit", (e) => {
     const apiKey = "115ad39c5e6db1215b30f60bc2b94b9a";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&&units=metric`;
     fetch(url)
-      .then((response) => response.json()) // Parse dữ liệu JSON
+      .then((response) => {
+        if (!response.ok) {
+          // Nếu phản hồi không OK, thông báo lỗi
+          throw new Error("City not found. Please enter a valid city name.");
+        }
+        return response.json(); // Parse dữ liệu JSON
+      })
       .then((data) => {
-        // console.log(data); // Xử lý dữ liệu thời tiết trả về từ API
-        additemToUI(data);
-        addItemToLocalStorage(data);
+        additemToUI(data); // Thêm dữ liệu vào giao diện
+        addItemToLocalStorage(data); // Lưu dữ liệu vào localStorage
       })
       .catch((error) => {
-        console.error("Error fetching data: ", error); // Nếu có lỗi khi gọi API
+        // Hiển thị thông báo lỗi khi API không trả về dữ liệu
+        alert(error.message);
       });
   } else {
     alert("Please enter a city name ");
@@ -70,4 +76,4 @@ const init = (data) => {
     additemToUI(item);
   });
 };
-init();
+// init();
