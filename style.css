@@ -52,3 +52,25 @@ button:hover {
   border: none;
   border-bottom: var(--text_light) 2px solid;
 }
+.weather-card {
+  margin-top: 3rem;
+  background-color: var(--text_light);
+  border-radius: 1rem;
+  padding: 20px;
+  width: 200px;
+  /* text-align: center; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text_dark, #1e2432);
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text_dark);
+}
+
+.temperature > sup {
+  margin: -1rem;
+  font-size: 2rem;
+  color: var(--text_dark);
+}
